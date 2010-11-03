@@ -1,7 +1,7 @@
 using StructureMap.Configuration.DSL;
 using Website.Startup;
 
-namespace Website.Registries
+namespace Website.IoC.Registries
 {
     public class RunOnAppStartupRegistry : Registry
     {

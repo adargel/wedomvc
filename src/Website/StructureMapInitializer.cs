@@ -1,5 +1,5 @@
 using StructureMap;
-using Website.Registries;
+using Website.IoC.Registries;
 
 namespace Website
 {

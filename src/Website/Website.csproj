@@ -74,13 +74,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IoC\Registries\SmartModelBinderRegistry.cs" />
+    <Compile Include="ModelBinders\IdToEntityModelBinder.cs" />
+    <Compile Include="ModelBinders\IFilteredModelBinder.cs" />
+    <Compile Include="ModelBinders\QueryableModelBinder.cs" />
+    <Compile Include="ModelBinders\SmartModelBinder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registries\ControllerRegistry.cs" />
-    <Compile Include="Registries\RepositoryRegistry.cs" />
-    <Compile Include="Registries\RunOnAppStartupRegistry.cs" />
+    <Compile Include="IoC\Registries\ControllerRegistry.cs" />
+    <Compile Include="IoC\Conventions\EntityModelBinderConventions.cs" />
+    <Compile Include="IoC\Registries\RepositoryRegistry.cs" />
+    <Compile Include="IoC\Registries\RunOnAppStartupRegistry.cs" />
     <Compile Include="Startup\AppStartupRunner.cs" />
     <Compile Include="Startup\ControllerFactorySetup.cs" />
     <Compile Include="Startup\IRunOnAppStartup.cs" />
+    <Compile Include="Startup\ModelBinderConfiguration.cs" />
     <Compile Include="Startup\RoutesConfiguration.cs" />
     <Compile Include="StructureMapInitializer.cs" />
   </ItemGroup>

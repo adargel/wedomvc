@@ -2,7 +2,7 @@ using Domain.Storage;
 using Storage;
 using StructureMap.Configuration.DSL;
 
-namespace Website.Registries
+namespace Website.IoC.Registries
 {
     public class RepositoryRegistry : Registry
     {

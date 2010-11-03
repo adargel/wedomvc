@@ -2,7 +2,7 @@ using System.Web.Mvc;
 using StructureMap.Configuration.DSL;
 using Website.Controllers;
 
-namespace Website.Registries
+namespace Website.IoC.Registries
 {
     public class ControllerRegistry : Registry
     {
