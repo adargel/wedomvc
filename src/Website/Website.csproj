@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Registries\ControllerRegistry.cs" />
+    <Compile Include="Registries\RepositoryRegistry.cs" />
     <Compile Include="Startup\ControllerFactorySetup.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -116,6 +117,10 @@
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{41F28981-FBAA-44E4-8470-028EA7E6DED8}</Project>
       <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Storage\Storage.csproj">
+      <Project>{4FFEBADD-6E37-4E21-BB95-CC2F060CA0A1}</Project>
+      <Name>Storage</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
