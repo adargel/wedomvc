@@ -15,12 +15,13 @@ namespace Website.Controllers
 
         public ViewResult Index()
         {
-            return View();
+            var categories = _repository.All();
+            return View(categories);
         }
 
-        public ViewResult View(int categoryId)
+        public ViewResult View(int id)
         {
-            var category = _repository.GetById(categoryId);
+            var category = _repository.GetById(id);
             return View(category);
         }
     }

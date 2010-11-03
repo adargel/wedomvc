@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using Domain.Model;
 using Domain.Storage;
 
@@ -15,6 +17,11 @@ namespace Storage
         public T GetById(int id)
         {
             return _context.All<T>().Find(id);
+        }
+
+        public IQueryable<T> All()
+        {
+            return _context.All<T>();
         }
     }
 }
