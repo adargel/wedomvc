@@ -77,6 +77,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registries\ControllerRegistry.cs" />
     <Compile Include="Registries\RepositoryRegistry.cs" />
+    <Compile Include="Registries\RunOnAppStartupRegistry.cs" />
+    <Compile Include="Startup\AppStartupRunner.cs" />
+    <Compile Include="Startup\ControllerFactorySetup.cs" />
+    <Compile Include="Startup\IRunOnAppStartup.cs" />
+    <Compile Include="Startup\RoutesConfiguration.cs" />
     <Compile Include="StructureMapInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
