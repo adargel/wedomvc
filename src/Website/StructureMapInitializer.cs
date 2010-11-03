@@ -1,8 +1,5 @@
-using System.Web.Mvc;
-using Domain.Storage;
-using Storage;
 using StructureMap;
-using Website.Controllers;
+using Website.Registries;
 
 namespace Website
 {
@@ -10,16 +7,12 @@ namespace Website
     {
         public static void Initialize()
         {
-            ObjectFactory.Initialize(x =>
+            ObjectFactory.Initialize(x => x.Scan(scan =>
                 {
-                    x.For(typeof (IRepository<>)).Use(typeof (EfRepository<>));
-                    x.Scan(scan =>
-                        {
-                            scan.TheCallingAssembly();
-                            scan.IncludeNamespaceContainingType<HomeController>();
-                            scan.AddAllTypesOf<Controller>();
-                        });
-                });
+                    scan.TheCallingAssembly();
+                    scan.IncludeNamespaceContainingType<RepositoryRegistry>();
+                    scan.LookForRegistries();
+                }));
         }
     }
 }
