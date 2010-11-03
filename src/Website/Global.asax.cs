@@ -1,5 +1,9 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
+using Domain.Storage;
+using Storage;
+using StructureMap;
+using Website.Controllers;
 
 namespace Website
 {
@@ -19,6 +23,8 @@ namespace Website
         protected void Application_Start()
         {
             RegisterRoutes(RouteTable.Routes);
+            ObjectFactory.Initialize(x => x.For(typeof(IRepository<>)).Use(typeof(EfRepository<>)));
+            System.Web.Mvc.ControllerBuilder.Current.SetControllerFactory(new InjectingControllerFactory());
         }
 
 
