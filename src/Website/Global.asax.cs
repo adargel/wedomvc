@@ -23,7 +23,7 @@ namespace Website
         protected void Application_Start()
         {
             RegisterRoutes(RouteTable.Routes);
-            ObjectFactory.Initialize(x => x.For(typeof(IRepository<>)).Use(typeof(EfRepository<>)));
+            StructureMapInitializer.Initialize();
             System.Web.Mvc.ControllerBuilder.Current.SetControllerFactory(new InjectingControllerFactory());
         }
 
