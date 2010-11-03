@@ -34,6 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="StructureMap">
+      <HintPath>..\..\lib\structuremap\StructureMap.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -69,6 +72,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registries\RunOnAppStartupRegistry.cs" />
+    <Compile Include="Startup\IRunOnAppStartup.cs" />
+    <Compile Include="StructureMapInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
