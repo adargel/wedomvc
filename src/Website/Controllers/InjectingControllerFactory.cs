@@ -3,7 +3,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using StructureMap;
 
-namespace Website.Startup
+namespace Website.Controllers
 {
     public class InjectingControllerFactory : DefaultControllerFactory
     {

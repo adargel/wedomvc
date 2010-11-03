@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using StructureMap;
+using Website.Startup;
 
 namespace Website
 {
@@ -26,9 +28,11 @@ namespace Website
 
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+            StructureMapInitializer.Initialize();
+            ObjectFactory.GetInstance<AppStartupRunner>().Run();
 
             RegisterRoutes(RouteTable.Routes);
+
         }
     }
 }

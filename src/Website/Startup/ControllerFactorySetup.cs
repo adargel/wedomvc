@@ -1,6 +1,6 @@
-﻿using Website.Startup;
+﻿using Website.Controllers;
 
-namespace Website.Controllers
+namespace Website.Startup
 {
     public class ControllerFactorySetup : IRunOnAppStartup
     {
