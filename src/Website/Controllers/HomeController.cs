@@ -1,16 +1,12 @@
 using System.Web.Mvc;
 using Domain.Model;
 using Domain.Storage;
-using Storage;
 
 namespace Website.Controllers
 {
     public class HomeController : Controller
     {
         readonly IRepository<Category> _repository;
-
-        public HomeController() :
-            this(new EfRepository<Category>(new EfDatabaseContext())) { }
 
         public HomeController(IRepository<Category> repository)
         {
