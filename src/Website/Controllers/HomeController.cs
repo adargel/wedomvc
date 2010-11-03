@@ -1,16 +1,17 @@
+using System.Linq;
 using System.Web.Mvc;
 using Domain.Model;
-using Domain.Storage;
+using Storage;
 
 namespace Website.Controllers
 {
-    public class CategoryController : Controller
+    public class HomeController : Controller
     {
-        readonly IRepository<Category> _repository;
+        readonly EfRepository<Category> _repository;
 
-        public CategoryController(IRepository<Category> repository)
+        public HomeController()
         {
-            _repository = repository;
+            _repository = new EfRepository<Category>(new EfDatabaseContext());
         }
 
         public ViewResult Index()
@@ -19,7 +20,7 @@ namespace Website.Controllers
             return View(categories);
         }
 
-        public ViewResult View(int id)
+        public ViewResult Get(int id)
         {
             var category = _repository.GetById(id);
             return View(category);

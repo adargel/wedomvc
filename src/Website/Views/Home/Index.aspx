@@ -22,7 +22,7 @@
                 {%>
             <tr>
                 <td>
-                    <%=Html.ActionLink("Select", "View", new {id = cat.Id}) %>
+                    <%=Html.ActionLink("Select", "Get", new {id = cat.Id}) %>
                 </td>
                 <td>
                     <%:cat.Name %>

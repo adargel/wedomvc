@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Entity.CTP, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
     <Reference Include="StructureMap">
       <HintPath>..\..\lib\structuremap\StructureMap.dll</HintPath>
     </Reference>
@@ -68,26 +69,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\CategoryController.cs" />
-    <Compile Include="Registries\ControllerRegistry.cs" />
-    <Compile Include="Registries\RepositoryRegistry.cs" />
-    <Compile Include="Startup\ControllerFactorySetup.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registries\RunOnAppStartupRegistry.cs" />
-    <Compile Include="Startup\AppStartupRunner.cs" />
-    <Compile Include="Controllers\InjectingControllerFactory.cs" />
-    <Compile Include="Startup\IRunOnAppStartup.cs" />
-    <Compile Include="Startup\RouteRegistration.cs" />
-    <Compile Include="StructureMapInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Views\Category\Index.aspx" />
-    <Content Include="Views\Category\View.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\Get.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
