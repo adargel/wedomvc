@@ -24,7 +24,7 @@ namespace Website.Controllers
         [HttpPost]
         public ViewResult Find(string name)
         {
-            var categories = _repository.All().Where().NameEquals(name);
+            var categories = _repository.All().Where().NameIsLike(name);
             return View(categories);
         }
     }
