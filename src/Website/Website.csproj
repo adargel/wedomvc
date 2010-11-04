@@ -69,11 +69,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InjectingControllerFactory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IoC\Registries\QueryProviderRegistry.cs" />
     <Compile Include="IoC\Registries\SmartModelBinderRegistry.cs" />
     <Compile Include="ModelBinders\IdToEntityModelBinder.cs" />
     <Compile Include="ModelBinders\IFilteredModelBinder.cs" />
@@ -94,6 +96,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Views\Categories\Find.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Home\Get.aspx" />
     <Content Include="Web.config" />
